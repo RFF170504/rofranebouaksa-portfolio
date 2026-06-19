@@ -1,0 +1,484 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg style="display:none">
+  <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="2" y1="13" x2="22" y2="13"/>
+  </symbol>
+  <symbol id="icon-megaphone" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M14.5 8a4 4 0 0 1 0 8"/><path d="M17.5 5.5a8 8 0 0 1 0 13"/>
+  </symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20"/>
+  </symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="#fff"/>
+</symbol>
+<symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.1-.7-.7-2.1 2.1-2.1z"/>
+</symbol>
+<symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="9" cy="8" r="3"/><path d="M2 20c0-3 3-5 7-5s7 2 7 5"/><circle cx="17" cy="8" r="2.5"/><path d="M16 20c0-2.5 1-4 4-4.5"/>
+</symbol>
+<symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3l10 18H2L12 3z"/><line x1="12" y1="9" x2="12" y2="13.5"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/>
+</symbol>
+<symbol id="icon-bulb" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0 0 12 3z"/>
+</symbol>
+<symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2.5l2.6 5.6 6.1.8-4.4 4.3 1.1 6.1-5.4-2.9-5.4 2.9 1.1-6.1L3.3 8.9l6.1-.8z"/>
+</symbol>
+</svg>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<!-- NAV -->
+<header>
+<div class="logo-container">
+        <img src="moi.jpg" alt="logo">
+    
+    <h1>Rofrane BOUAKSA</h1>
+    </div>
+	<nav>
+        <a href="#home">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a href="#parcours">Parcours</a>
+		<a href="#experience">Expériences</a>
+        <a href="#skills">Compétences</a>
+		<a href="#apprentissages">Défis</a>
+        
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Étudiante en Master Marketing Digital et E-Commerce  </h2>
+        <p>
+            Étudiante en Master PGE marketing digital et E-commerce à l'IESEG, je suis
+            passionnée par l’innovation, l’interculturalité et les stratégies digitales.
+        </p>
+    </div>
+
+    <!-- graphique décoratif -->
+    <div class="hero-graphic"></div>
+</section>
+
+<!-- PROJETS -->
+<section id="projects" class="fade">
+    <h2>Projets & Réalisations</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Gestion de Crise</h3>
+            <p>Analyse de la crise de Balenciaga de Septembre 2022</p>
+
+<a href="Communication de crise CR.pdf" target="_blank" class="project-link">
+    <img src="preview-crise.jpg" alt="">
+    <video muted loop>
+        <source src="Videocrise.mp4" type="video/mp4">
+    </video>
+</a>
+        </div>
+
+        <div class="card">
+            <h3>Site web</h3>
+            <p>Conception et développement de sites web dans un cadre académique.
+			<BR> <BR> Voici une réalisation de mon site web sur les voyages et destinations </p>
+			<a href="site/DESTINATION PARTIEL2.html" target="_blank" class="project-link">
+    <img src="site-preview.jpg"  alt="aperçu site">
+    </a>
+	
+        </div>
+		
+<div class="card">
+            <h3>Séjours linguistiques</h3>
+            <p>	Réalisation de séjours en Malaisie à Kuala Lumpur, en Angleterre à Londres, et en Espagne à Madrid.
+			<BR> <BR> Voici une idée de mes sejours, avec ce que j'y ai fait, et appris </p>
+			<a href="ilovepdf_merged.pdf" target="_blank" class="project-link">
+    <img src="Capture d'écran 2026-03-26 224332.jpg"  alt="aperçu site">
+		 </a>
+</div>
+        <div class="card">
+            <h3>Stage international</h3>
+            <p>Organisation de réunions et gestion de projets à dimension internationale.</p>
+			<a href="Rapport de stage.pdf" target="_blank" class="project-link">
+			<img src="rapport.jpg" alt="">
+			</a>
+        </div>
+		
+		<div class="card">
+            <h3>Droit Européeen</h3>
+            <p>L'analyse de la décision Polat contre Autriche numéro 12 886 -16
+du 20 juillet 2021 </p>
+			<a href="POLAT AUTRICE DROIT.pdf" target="_blank" class="project-link">
+			<img src="Capture d'écran 2026-03-26 225908.png" alt="">
+			</a>
+        </div>
+		
+		<div class="card">
+            <h3>Management </h3>
+            <p>Etude sur l'intelligence émotionelle dans le management moderne
+			<BR><BR> Qu'elle importance a-t-elle?</p>
+			<a href="Orange and Teal Modern Emotional Intelligence Leadership Presentation.pdf" target="_blank" class="project-link">
+			<img src="Capture d'écran 2026-03-26 231334.png" alt="">
+			</a>
+        </div>
+		
+		<div class="card">
+            <h3>Communication Internationale</h3>
+            <p>Etude sur les data des consommateurs
+			<BR><BR> Qu'elle importance a-t-elle?</p>
+			<a href="Representing Data Presentation in Blue Green Flat Graphic Style-1.pdf" target="_blank" class="project-link">
+			<img src="Capture d'écran 2026-03-26 231927.png" alt="">
+			</a>
+        </div>
+		
+		<div class="card">
+            <h3>Marketplace</h3>
+            <p> Comment fonctionne une marketplace</p>
+			<a href="Black and White Modern Stock Market Presentation-1.pdf" target="_blank" class="project-link">
+			<img src="Capture d'écran 2026-06-11 142706.png" alt="">
+			</a>
+        </div>
+		<div class="card">
+            <h3>Salon</h3>
+            <p> Préparation d'un évenement réalisée par les bénévoles de l'association </p>
+			<a href="WhatsApp Video 2026-06-19 at 12.26.31(1).mp4" target="_blank" class="project-link">
+			<img src="alon.png" alt="">
+			</a>
+        </div>
+    </div>
+</section>
+<section id="parcours">
+    <h2>Mon parcours</h2>
+
+    <div class="path-container">
+
+        <!-- ligne SVG (courbe) -->
+        <svg viewBox="0 0 1000 600" class="path">
+    <path id="curve"
+        d="M50,300 
+           C200,100 400,100 550,300 
+           C700,500 850,500 950,200"
+        fill="none"
+        stroke="white"
+        stroke-width="3"/>
+</svg>
+        <!-- étapes -->
+        <div class="step" style="top: 260px; left: 90px;">
+    <img src="1989_11_763c662febb225f22886e94542b6f182.jpg" class="logo">
+    <div class="dot"></div>
+    <p>Lycée</p>
+</div>
+
+<div class="step" style="top: 160px; left: 250px;">
+    <img src="image.jpg" class="logo">
+    <div class="dot"></div>
+    <p>Année à l’étranger</p>
+</div>
+
+<div class="step" style="top: 180px; left: 445px;">
+    <img src="Logo-version-principale-verticale-RVB.jpg" class="logo">
+    <div class="dot"></div>
+    <p>Licence LEA </p>
+</div>
+
+<div class="step" style="top: 320px; left: 600px;">
+    <img src="erasmus.png" class="logo">
+    <div class="dot"></div>
+    <p>Formation internationale</p>
+</div>
+
+<div class="step" style="top: 475px; left: 780px;">
+    <img src="images.jpg" class="logo">
+    <div class="dot active"></div>
+    <p>IÉSEG Master PGE Marketing Digital <BR> <center> & E-commerce </center> </p>
+</div>
+
+<div class="step" style="top: 300px; left: 980px;">
+    <img src="LOGO-MAXXING.png" class="logo">
+    <div class="dot active"></div>
+    <p> <center> Future alternance </center> </p>
+</div>
+
+</div>
+</section>
+
+       <!-- EXPERIENCE -->
+<section id="experience" class="fade">
+    <h2>Expériences</h2>
+<div class="spotlight-grid">
+    <div class="spotlight-card" style="--glow:rgba(124,58,237,0.25)">
+        <span class="big-num" style="background-image:linear-gradient(135deg,#7c3aed,transparent)">01</span>
+        <div class="icon icon-violet"><svg><use href="#icon-briefcase"/></svg></div>
+        <h3>Stage à Istanbul</h3>
+        <p>Expérience en marketing digital et relations internationales. Création de contenu, gestion CRM (Bitrix24), organisation de réunions.
+			<BR> <BR> <CENTER> <img src="Capture d'écran 2026-06-11 163608.png" width="300" height="150">
+			</CENTER> </p>
+    </div>
+ <div class="spotlight-card" style="--glow:rgba(236,72,153,0.25)">
+        <span class="big-num" style="background-image:linear-gradient(135deg,#ec4899,transparent)">02</span>
+        <div class="icon icon-pink"><svg><use href="#icon-heart"/></svg></div>
+        <h3>Bénévolat</h3>
+        <p>Engagement associatif : événementiel, maraudes, développement de compétences humaines.</p>
+		<BR> <BR> <CENTER> <img src="BENEVOLE.png" width="300" height="150">
+	</CENTER></div> 
+	
+    <div class="spotlight-card" style="--glow:rgba(37,99,235,0.25)">
+        <span class="big-num" style="background-image:linear-gradient(135deg,#2563eb,transparent)">03</span>
+        <div class="icon icon-blue"><svg><use href="#icon-megaphone"/></svg></div>
+        <h3>Ambassadrice Université</h3>
+        <p>Représentation de la faculté et communication institutionnelle.</p>
+		<BR> <img src="AMBASSADRICE.png" width="350" height="200">
+    </div>
+
+   
+
+    <div class="spotlight-card" style="--glow:rgba(6,182,212,0.25)">
+        <span class="big-num" style="background-image:linear-gradient(135deg,#06b6d4,transparent)">04</span>
+        <div class="icon icon-cyan"><svg><use href="#icon-globe"/></svg></div>
+        <h3>Programme Erasmus+</h3>
+        <p>Formation en intelligence artificielle et émotionnelle en Suède et au Danemark.</p>
+		<BR> <img src="eramusSE.png" width="350" height="200">
+	</div>
+</div>
+   
+
+   
+</section>
+
+<!-- COMPETENCES -->
+<section id="skills" class="fade">
+    <h2>Compétences</h2>
+<div class="skills-grid">
+    <div class="skill-card">
+        <h3><div class="icon icon-violet"><svg><use href="#icon-target"/></svg></div> Marketing & Stratégie</h3>
+        <div class="tags">
+            <div class="tag-pill" style="--accent:#7c3aed">SEO</div>
+            <div class="tag-pill" style="--accent:#7c3aed">CRM</div>
+            <div class="tag-pill" style="--accent:#7c3aed">Réseaux sociaux</div>
+            <div class="tag-pill" style="--accent:#7c3aed">Content Marketing</div>
+            <div class="tag-pill" style="--accent:#7c3aed">E-commerce</div>
+            <div class="tag-pill" style="--accent:#7c3aed">Stratégie de marque</div>
+            <div class="tag-pill" style="--accent:#7c3aed">Communication Interculturelle</div>           
+		    <div class="tag-pill" style="--accent:#7c3aed">Gestion de crisse</div>
+			<div class="tag-pill" style="--accent:#7c3aed">Veille concurrentielle</div>
+		</div>
+    </div>
+    <div class="skill-card">
+        <h3><div class="icon icon-blue"><svg><use href="#icon-tool"/></svg></div> Outils & Logiciels</h3>
+        <div class="tags">
+            <div class="tag-pill" style="--accent:#2563eb">Google Analytics</div>
+            <div class="tag-pill" style="--accent:#2563eb">Pack Office</div>
+            <div class="tag-pill" style="--accent:#2563eb">Canva</div>
+            <div class="tag-pill" style="--accent:#2563eb">HTML</div>
+            <div class="tag-pill" style="--accent:#2563eb">Bitrix24 CRM</div>
+            <div class="tag-pill" style="--accent:#2563eb">Réseaux sociaux</div>
+			<div class="tag-pill" style="--accent:#2563eb">Suite Adobe</div>
+        </div>
+    </div>
+    <div class="skill-card">
+        <h3><div class="icon icon-pink"><svg><use href="#icon-globe"/></svg></div> Langues</h3>
+        <div class="tags">
+            <div class="tag-pill" style="--accent:#ec4899">Français <span class="level">Natif</span></div>
+            <div class="tag-pill" style="--accent:#ec4899">Anglais <span class="level">C1</span></div>
+            <div class="tag-pill" style="--accent:#ec4899">Espagnol <span class="level">B2</span></div>
+            <div class="tag-pill" style="--accent:#ec4899">Arabe <span class="level">Natif</span></div>
+        </div>
+    </div>
+    <div class="skill-card">
+        <h3><div class="icon icon-cyan"><svg><use href="#icon-users"/></svg></div> Soft Skills</h3>
+        <div class="tags">
+			<div class="tag-pill" style="--accent:#06b6d4">Adaptabilité</div>
+			<div class="tag-pill" style="--accent:#06b6d4">Créativité & Curiosité</div>
+			<div class="tag-pill" style="--accent:#06b6d4">Prise de parole en public</div>
+            <div class="tag-pill" style="--accent:#06b6d4">Communication</div>
+            <div class="tag-pill" style="--accent:#06b6d4">Gestion de projet</div>
+            <div class="tag-pill" style="--accent:#06b6d4">Organisation</div>
+            <div class="tag-pill" style="--accent:#06b6d4">Esprit d'équipe</div>
+            
+            <div class="tag-pill" style="--accent:#06b6d4">Autonomie</div>
+        </div>
+    </div>
+</div>
+   
+
+<section id="apprentissages" class="fade">
+    <h2>Défis & apprentissages</h2>
+    <p class="section-sub"></p>
+
+    <div class="story-list">
+        <div class="story-card" style="--accent:#7c3aed; --accent-glow:rgba(124,58,237,0.45)">
+            <h3 class="story-title">L'organisation</h3>
+            <div class="stepper">
+                <button class="step-btn active" data-target="problem">
+                    <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+                    Problème
+                </button>
+                <div class="step-line"></div>
+                <button class="step-btn active" data-target="solution">
+                    <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+                    Solution
+                </button>
+                <div class="step-line"></div>
+                <button class="step-btn active" data-target="lesson">
+                    <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+                    Apprentissage
+                </button>
+            </div>
+            <div class="story-content">
+                <p class="story-panel active" data-panel="problem"> Lorsque je suis entrée à l'université, j'ai subis une réorientation et j'ai integré l'Université Catholique de Lille au second semestre, avec un semestre de 17 matières à rattraper. </p>
+                <p class="story-panel" data-panel="solution">J'ai construit un plan structuré sur feuille avec toutes informations importantes et dates.</p>
+                <p class="story-panel" data-panel="lesson">L'adaptabilité et la compréhension sont essentielles : une organisation mal préparée peut amplifier une situation au lieu de l'améliorer. Mieux vaut un cadre prêt à l'avance.</p>
+            </div>
+        </div>
+
+        <div class="story-card" style="--accent:#2563eb; --accent-glow:rgba(37,99,235,0.45)">
+            <h3 class="story-title">Stage à Istanbul — Suivi client</h3>
+            <div class="stepper">
+                <button class="step-btn active" data-target="problem">
+                    <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+                    Problème
+                </button>
+                <div class="step-line"></div>
+                <button class="step-btn" data-target="solution">
+                    <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+                    Solution
+                </button>
+                <div class="step-line"></div>
+                <button class="step-btn" data-target="lesson">
+                    <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+                    Apprentissage
+                </button>
+            </div>
+            <div class="story-content">
+                <p class="story-panel active" data-panel="problem">Le suivi des contacts clients était dispersé entre plusieurs outils, rendant la collaboration entre équipes difficile et source d'erreurs.</p>
+                <p class="story-panel" data-panel="solution">J'ai participé à la centralisation des données dans le CRM Bitrix24, avec un système de suivi unifié accessible à toute l'équipe.</p>
+                <p class="story-panel" data-panel="lesson">Centraliser l'information fait gagner un temps précieux et améliore considérablement la collaboration — un bon outil change tout.</p>
+            </div>
+        </div>
+		
+		<div class="story-card" style="--accent:#ec4899; --accent-glow:rgba(236,72,153,0.45)">
+    <h3 class="story-title">Prospection internationale — 99 agences contactées</h3>
+    <div class="stepper">
+        <button class="step-btn active" data-target="problem">
+            <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+            Problème
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="solution">
+            <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+            Solution
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="lesson">
+            <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+            Apprentissage
+        </button>
+    </div>
+    <div class="story-content">
+        <p class="story-panel active" data-panel="problem">En charge des relations internationales à Cambridge Academy Istanbul, je devais identifier et contacter des agences partenaires à l'étranger — sans réponse garantie, en représentant officiellement l'institution en anglais.</p>
+        <p class="story-panel" data-panel="solution">J'ai structuré ma prospection dans un tableau Excel de suivi, en adaptant le canal (mail puis WhatsApp après 24h) et le ton selon le profil de chaque agence. Au total, 99 agences contactées, plusieurs visioconférences organisées avec des partenaires en Géorgie et en Italie.</p>
+        <p class="story-panel" data-panel="lesson">La persévérance et l'adaptation du discours sont essentielles en développement commercial : chaque interlocuteur a ses propres codes, et savoir s'y adapter est la clé pour transformer un premier contact en collaboration concrète.</p>
+    </div>
+</div>
+
+<div class="story-card" style="--accent:#06b6d4; --accent-glow:rgba(6,182,212,0.45)">
+    <h3 class="story-title">Prise de parole en langue étrangère sous pression</h3>
+    <div class="stepper">
+        <button class="step-btn active" data-target="problem">
+            <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+            Problème
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="solution">
+            <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+            Solution
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="lesson">
+            <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+            Apprentissage
+        </button>
+    </div>
+    <div class="story-content">
+        <p class="story-panel active" data-panel="problem">En tant que représentante commerciale, je devais appeler des prospects en anglais et en arabe — dans une langue étrangère, face à ma propre appréhension du téléphone, sous le regard de mon tuteur.</p>
+        <p class="story-panel" data-panel="solution">J'ai préparé des scripts d'appel adaptés à chaque profil, en m'appuyant sur mon tuteur lors des premiers échanges. Progressivement, j'ai gagné en autonomie jusqu'à répondre seule à l'accueil de l'académie en fin de stage.</p>
+        <p class="story-panel" data-panel="lesson">Sortir de sa zone de confort est la condition de la progression : l'aisance relationnelle se construit par la pratique, même (et surtout) dans les situations inconfortables.</p>
+    </div>
+</div>
+
+<div class="story-card" style="--accent:#7c3aed; --accent-glow:rgba(124,58,237,0.45)">
+    <h3 class="story-title">Créer du contenu quotidien en respectant une identité visuelle</h3>
+    <div class="stepper">
+        <button class="step-btn active" data-target="problem">
+            <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+            Problème
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="solution">
+            <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+            Solution
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="lesson">
+            <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+            Apprentissage
+        </button>
+    </div>
+    <div class="story-content">
+        <p class="story-panel active" data-panel="problem">Cambridge Academy Istanbul devait alimenter ses réseaux sociaux tous les jours avec des contenus cohérents — stories, posts, visuels — tout en respectant des codes visuels stricts (couleurs, peu de texte, mots-clés, logo).</p>
+        <p class="story-panel" data-panel="solution">Aux côtés de la responsable marketing, j'ai créé des visuels sur Canva en respectant la charte graphique de l'académie, en adaptant chaque publication selon sa cible et son objectif (notoriété, conversion, engagement).</p>
+        <p class="story-panel" data-panel="lesson">La régularité et la cohérence visuelle sont les fondations d'une image de marque forte : chaque publication est une brique de la notoriété, et la discipline éditoriale fait toute la différence sur le long terme.</p>
+    </div>
+</div>
+
+<div class="story-card" style="--accent:#2563eb; --accent-glow:rgba(37,99,235,0.45)">
+    <h3 class="story-title">Représenter une institution face à 2000+ visiteurs</h3>
+    <div class="stepper">
+        <button class="step-btn active" data-target="problem">
+            <div class="step-icon"><svg><use href="#icon-alert"/></svg></div>
+            Problème
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="solution">
+            <div class="step-icon"><svg><use href="#icon-bulb"/></svg></div>
+            Solution
+        </button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-target="lesson">
+            <div class="step-icon"><svg><use href="#icon-star"/></svg></div>
+            Apprentissage
+        </button>
+    </div>
+    <div class="story-content">
+        <p class="story-panel active" data-panel="problem">En tant qu'ambassadrice de l'Université Catholique de Lille, je devais représenter la faculté lors de 20+ salons et forums nationaux et internationaux, face à des publics très différents : lycéens, parents, professionnels.</p>
+        <p class="story-panel" data-panel="solution">J'ai créé 6 supports de communication adaptés à chaque événement, animé 7 conférences et accueilli plus de 2000 visiteurs lors des journées portes ouvertes — en adaptant à chaque fois mon discours selon l'interlocuteur et ses attentes.</p>
+        <p class="story-panel" data-panel="lesson">Savoir adapter sa communication selon le profil de son interlocuteur est une compétence fondamentale en événementiel et en communication institutionnelle — c'est ce qui transforme un visiteur curieux en candidat convaincu.</p>
+    </div>
+</div>
+		
+		
+    </div>
+</section>   
+    
+</section>
+
+<footer>
+    <p>© 2026 - Bouaksa Rofrane</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
