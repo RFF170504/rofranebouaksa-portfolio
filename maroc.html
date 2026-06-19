@@ -1,0 +1,139 @@
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marrakech — La Ville Ocre</title>
+  <link rel="stylesheet" href="marco.css">
+</head>
+
+<body>
+
+
+<header class="city-header">
+  <h1>Marrakech — La Ville Ocre</h1>
+  <div class="header-line"></div>
+</header>
+
+
+<div class="container">
+
+  <!-- INFOS -->
+  <section class="panel info">
+    <h2>🛫 Informations pratiques</h2>
+    <p><strong>Vol :</strong> Environ 3h30 depuis Paris</p>
+    <p><strong>Compagnies :</strong> Air France, Royal Air Maroc, Transavia</p>
+    <p><strong>Climat :</strong> Chaud et ensoleillé la plupart de l'année ; soirées fraîches selon la saison.</p>
+  </section>
+
+  <!-- ACTIVITES -->
+  <section class="panel">
+    <h2>🕌 À découvrir</h2>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <img src="images/Jardin Majorelle.jpg" alt="Jardin Majorelle">
+        <div class="activity-info">Jardin Majorelle — Un havre de bleu et de verdure</div>
+      </div>
+      <div class="activity-card">
+        <img src="images/Place Jemaa el-Fna.jpg" alt="Place Jemaa el-Fna">
+        <div class="activity-info">Place Jemaa el-Fna — Spectacle vivant au crépuscule</div>
+      </div>
+      <div class="activity-card">
+        <img src="images/Palais de la Bahia.jpg" alt="Palais de la Bahia">
+        <div class="activity-info">Palais de la Bahia — Splendeur andalouse</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GASTRONOMIE -->
+  <section class="panel">
+  <h2>🍴 Saveurs de Marrakech</h2>
+  <p>Impossible de visiter Marrakech sans se laisser tenter par ses spécialités ! Voici quelques plats et douceurs typiques à découvrir :</p>
+
+  <div class="food-grid">
+    <div class="flip-card" title="Tajine">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍲</div>
+        <div class="flip-card-back">
+          <img src="images/tajine-marocain.avif" alt="Tajine marocain">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" title="Couscous">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🥘</div>
+        <div class="flip-card-back">
+          <img src="images/couscous.jpg" alt="Couscous royal">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" title="Pastilla">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🥧</div>
+        <div class="flip-card-back">
+          <img src="images/Pastilla.jpg" alt="Pastilla">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" title="Brochettes">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍢</div>
+        <div class="flip-card-back">
+          <img src="images/Brochettes marocaines.jpg" alt="Brochettes marocaines">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" title="Thé à la menthe">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🫖</div>
+        <div class="flip-card-back">
+          <img src="images/the.jpg" alt="Thé à la menthe">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" title="Pâtisseries marocaines">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍯</div>
+        <div class="flip-card-back">
+          <img src="images/gateau.jpg" alt="Pâtisseries marocaines">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- VIDEOS -->
+  <section class="panel city-videos">
+    <h2>🎥 Marrakech en images</h2>
+    <div class="videos-row">
+      <video controls preload="metadata">
+        <source src="Audio/🇲🇦 Explore Marrakech, Imperial City of Morocco by One Minute City.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-marrakech">
+    <div class="back-home" id="backHomeBtn">☀️ Trop chaud ? Clique avant de fondre dans la médina !</div>
+  </footer>
+
+</div>
+
+<script>
+document.getElementById('backHomeBtn').addEventListener('click', function(e){
+  const el = e.currentTarget;
+  el.classList.add('melt');
+  setTimeout(()=> window.location.href = 'destination urbaines 2.html', 900);
+});
+</script>
+
+</body>
+</html>
+

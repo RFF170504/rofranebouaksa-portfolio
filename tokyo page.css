@@ -1,0 +1,75 @@
+.activite {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    perspective: 1000px; /* permet effet 3D */
+}
+
+.activite:hover {
+    transform: scale(1.25) rotateX(5deg) rotateY(5deg); /* zoom + léger effet 3D */
+    box-shadow: 0 20px 40px rgba(255, 100, 255, 0.9); /* plus lumineux et volumineux */
+    z-index: 10; /* passe au-dessus des autres cartes */
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg) scale(1.2);
+  z-index: 10;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+.flip-card-front {
+  background: rgba(255,255,255,0.1);
+}
+
+.flip-card-back {
+  background: rgba(0,0,0,0.05);
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}

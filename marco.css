@@ -1,0 +1,155 @@
+:root{
+  --bg-dark:#0f0f0f;
+  --panel:#1b1b1b;
+  --ocre:#b45309;
+  --gold:#ffd166;
+}
+
+/* === GLOBAL === */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  color:#fff;
+  background:linear-gradient(180deg,#0f0f0f,#171212 50%,#0f0f0f);
+}
+
+
+/* === HERO === */
+.hero-image{
+  position:relative;
+  height:420px;
+  background:url('images/marrakech-hero.jpg') center/cover no-repeat;
+  border-bottom:6px solid var(--ocre);
+  box-shadow:0 10px 60px rgba(180,100,20,0.08);
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55));
+}
+.hero-image h1{
+  position:absolute;
+  top:20px;left:50%;
+  transform:translateX(-50%);
+  color:var(--gold);
+  font-size:2.4rem;
+  text-shadow:0 2px 18px rgba(180,120,20,.35);
+}
+.hero-image::before{
+  content:"";
+  position:absolute;left:0;right:0;bottom:0;
+  height:12vw;
+  background:radial-gradient(circle at 50% 100%,rgba(255,200,80,.28) 0%,rgba(255,200,80,.12) 35%,transparent 75%);
+  filter:blur(14px);
+  animation:shimmer 7s infinite alternate ease-in-out;
+}
+@keyframes shimmer{from{opacity:.95}to{opacity:.75}}
+
+/* === CONTAINER === */
+.container{max-width:1100px;margin:40px auto;padding:0 18px;}
+.panel{
+  background:rgba(255,255,255,0.03);
+  border-radius:14px;
+  padding:26px;
+  box-shadow:0 6px 30px rgba(0,0,0,.5);
+  margin-bottom:28px;
+  border:1px solid rgba(255,209,102,0.05);
+}
+.panel h2{text-align:center;color:var(--gold);}
+
+/* === ACTIVITES === */
+.activities-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.activity-card{
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  background:rgba(35,25,15,.6);
+  transition:.35s;
+}
+.activity-card img{width:100%;height:160px;object-fit:cover;transition:.4s;}
+.activity-card:hover img{transform:scale(1.08);}
+.activity-info{
+  background:rgba(0,0,0,.6);
+  padding:10px;
+  color:var(--gold);
+  text-align:center;
+  font-weight:600;
+}
+
+/* === FOOD === */
+.food-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:18px;
+  justify-items:center;
+}
+.flip-card{width:150px;height:150px;perspective:1000px;}
+.flip-card-inner{width:100%;height:100%;transition:transform .75s;transform-style:preserve-3d;}
+.flip-card:hover .flip-card-inner{transform:rotateY(180deg);}
+.flip-card-front,.flip-card-back{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  border-radius:12px;backface-visibility:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,.5);
+}
+.flip-card-front{background:var(--gold);color:#2b1b00;font-size:2.2rem;}
+.flip-card-back{background:rgba(0,0,0,.45);transform:rotateY(180deg);}
+.flip-card-back img{width:100%;height:100%;object-fit:cover;border-radius:12px;}
+
+/* === VIDEOS === */
+.videos-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;}
+.videos-row video{border-radius:10px;box-shadow:0 10px 40px rgba(180,100,20,.12);max-width:48%;}
+
+/* === FOOTER === */
+.footer-marrakech{
+  background:linear-gradient(180deg,#0a0a0a,#140c08);
+  padding:26px;text-align:center;
+  border-top:4px solid rgba(255,200,60,0.08);
+}
+.back-home{
+  display:inline-block;
+  color:var(--gold);
+  font-weight:700;
+  padding:12px 22px;
+  border-radius:30px;
+  border:1px solid rgba(255,209,102,0.12);
+  box-shadow:0 6px 20px rgba(180,100,20,.08);
+  transition:.28s;
+  cursor:pointer;
+}
+.back-home:hover{transform:scale(1.08);box-shadow:0 18px 50px rgba(255,200,60,.12);}
+.back-home.melt{animation:melt-away .95s forwards;}
+@keyframes melt-away{
+  0%{transform:scale(1);opacity:1;}
+  100%{transform:scale(.2)translateY(40px);opacity:0;filter:blur(6px);}
+}
+
+/* === RESPONSIVE === */
+@media(max-width:720px){
+  .hero-image{height:300px}
+  .hero-image h1{font-size:1.6rem}
+  .videos-row video{max-width:100%}
+}
+.city-header {
+  text-align: center;
+  margin: 40px auto 30px auto;
+}
+
+.city-header h1 {
+  color: var(--gold);
+  font-size: 2.5em;
+  text-shadow: 0 0 15px rgba(255, 200, 60, 0.5);
+}
+
+.header-line {
+  width: 120px;
+  height: 4px;
+  background-color: var(--ocre);
+  border-radius: 2px;
+  margin: 12px auto 0 auto;
+  box-shadow: 0 0 10px rgba(180, 100, 20, 0.7);
+}
+

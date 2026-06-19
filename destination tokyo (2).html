@@ -1,0 +1,225 @@
+<html lang="fr">
+<head>
+<link href="tokyo page.css" rel="stylesheet" type="text/css" >
+  <meta charset="UTF-8">
+  <title>Tokyo ⛩️ </title>
+  <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #000000, #2d0036, #5a189a);
+    color: #fff;
+    background-attachment: fixed;
+  }
+
+  header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  header h1 {
+    font-size: 3em;
+    background: linear-gradient(90deg, #ff007f, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255, 0, 100, 0.8);
+  }
+
+  header p {
+    color: #f3e5f5;
+    font-size: 1.2em;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.2);
+  }
+
+  h2 {
+    color: #ff4dd2;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+
+  /* 🏙️ Style pour la liste des choses à faire */
+  .activites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 10px;
+  }
+
+  .activite {
+     background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    perspective: 1000px; /* permet effet 3D */
+  }
+
+  .activite:hover {
+     transform: scale(1.25) rotateX(5deg) rotateY(5deg); /* zoom + léger effet 3D */
+    box-shadow: 0 20px 40px rgba(255, 100, 255, 0.9); /* plus lumineux et volumineux */
+    z-index: 10; /* passe au-dessus des autres cartes */
+  }
+
+  .activite img {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .activite p {
+    font-size: 1em;
+    color: #f8e9ff;
+  }
+
+  iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  }
+
+  .retour {
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ff007f, #ffcc00);
+    color: black;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: fit-content;
+  }
+
+  .retour:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+  }
+</style>
+
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenue à Tokyo ⛩️</h1>
+    <p>Une ville où tradition, modernité et énergie ne font qu’un.</p>
+  </header>
+
+  <section>
+    <h2>🛫 Informations sur le voyage</h2>
+    <p><strong>Vol :</strong> Environ 12h30 depuis Paris</p>
+    <p><strong>Compagnies :</strong> Air France, ANA, Japan Airlines</p>
+    <p><strong>Escale :</strong> possible à Dubaï, Francfort ou Helsinki selon le vol</p>
+  </section>
+
+  <section>
+    <h2>🏮 À faire à Tokyo</h2>
+   <div class="activites">
+  <div class="activite">
+    <img src="images/quartier de Shibuya.jpg" alt="quartier de Shibuya.jpg">
+    <p>Visiter le quartier de Shibuya et son célèbre passage piéton.</p>
+  </div>
+  <div class="activite">
+    <img src="images/temple Senso-ji à Asakusa.jpg" alt="temple Senso-ji à Asakusa.jpg">
+    <p>Découvrir le temple Senso-ji à Asakusa.</p>
+  </div>
+  <div class="activite">
+    <img src="images/tsukiji.jpg" alt="tsukiji.jpg">
+    <p>Explorer le marché de Tsukiji et déguster des sushis frais.</p>
+  </div>
+  <div class="activite">
+    <img src="images/Tokyo Skytree.jpg" alt="Tokyo Skytree">
+    <p>Admirer la vue panoramique depuis la Tokyo Skytree.</p>
+  </div>
+  <div class="activite">
+    <img src="images/R (1).jpg" alt="Harajuku">
+    <p>Faire du shopping à Harajuku et Shinjuku.</p>
+  </div>
+</div>
+  </section>
+
+  <section>
+    <h2>🍜 Spécialités culinaires</h2>
+    <p>Tokyo est un paradis pour les gourmets ! Goûtez aux ramen, tempura, sushi et yakitori, ou laissez-vous tenter par les snacks de rue typiquement japonais.</p>
+  <div class="food-grid">
+    <!-- Sushi -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍣</div>
+        <div class="flip-card-back">
+          <img src="images/sushi.jpg" alt="Sushi">
+        </div>
+      </div>
+    </div>
+
+    <!-- Ramen -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍜</div>
+        <div class="flip-card-back">
+          <img src="images/ramenjaponais.png" alt="Ramen">
+        </div>
+      </div>
+    </div>
+
+    <!-- Tempura -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍤</div>
+        <div class="flip-card-back">
+          <img src="images/tempura.jpg" alt="Tempura">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mochi -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍡</div>
+        <div class="flip-card-back">
+          <img src="images/mochi.jpg" alt="Mochi">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+  
+  </section>
+
+  <section>
+    <h2>🎥 Découvrez Tokyo en vidéo</h2>
+	<center>
+   <video width="560" height="315" controls>
+    <source src="audio/videoplayback.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video>
+<br> <br>
+  <!-- Deuxième vidéo -->
+  <video width="560" height="315" controls>
+    <source src="audio/videoplayback2.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+	</video>
+  </section>
+
+  <a href="destination urbaines 2.html" class="retour">⬅️ Retour aux destinations urbaines</a>
+
+</body>
+</html>

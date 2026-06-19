@@ -1,0 +1,275 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #0d2e1d, #134528, #1c5a34);
+  color: #f3f2dd;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+
+.angkor-header {
+  text-align: center;
+  padding: 60px 20px;
+  color: #e4d8a4;
+  text-shadow: 0 0 20px rgba(255, 230, 150, 0.6);
+}
+
+.angkor-header h1 {
+  font-size: 3.5em;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* ===== INTRO ===== */
+
+.intro {
+  max-width: 850px;
+  margin: 30px auto;
+  background: rgba(255, 230, 150, 0.15);
+  padding: 22px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ===== INFOS ===== */
+
+.infos h2 {
+  text-align: center;
+  color: #e4d8a4;
+  font-size: 2.3em;
+}
+
+.info-list {
+  max-width: 750px;
+  margin: 20px auto;
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.7;
+}
+
+.info-list li::before {
+  content: "✨ ";
+  color: gold;
+}
+
+/* ===== LIEUX À VISITER ===== */
+
+.places h2 {
+  text-align: center;
+  font-size: 2.3em;
+  color: #e4dca8;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.place-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(212, 172, 98, 0.5);
+  box-shadow: 0 0 12px rgba(255, 230, 150, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 230, 150, 0.9);
+}
+
+.place-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.place-info {
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* ===== FOOD ===== */
+
+.food h2 {
+  text-align: center;
+  color: #e4d8a4;
+  font-size: 2.3em;
+}
+
+.food-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Flip cards */
+.flip-card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-front {
+  font-size: 2.5rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-info {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== VIDEOS ===== */
+
+.videos h2 {
+  text-align: center;
+  color: #e4d8a4;
+  font-size: 2.3em;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ===== FOOTER ===== */
+
+.angkor-footer {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 30px;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e4d8a4;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: #0d2e1d;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.back-home:hover {
+  transform: scale(1.1);
+}
+/* ---- FOND ÉLÉGANT ANGKOR : vert + blanc + effet pierre ---- */
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 90% 90%, #e8f2ea, #b9d4c0 40%, #7fa68a 80%) no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #f7e7b3; /* doré pâle */
+}
+
+
+
+/* Titres dorés */
+h1, h2, h3 {
+    color: #f4d98a; /* doré chaud */
+    font-family: "Georgia", serif;
+    letter-spacing: 1px;
+}
+/* Titres dorés avec ombre noire pour plus de lisibilité */
+h1, h2, h3, p , li, section{
+    color: #f4d98a; /* doré chaud */
+    font-family: "Snell Roundhand", cursive; /* style élégant */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* ombre noire subtile */
+}
+
+.angkor-decor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.angkor-decor span {
+  position: absolute;
+  font-size: 2em;
+  animation: floatAngkor 20s linear infinite;
+  opacity: 0.7;
+}
+
+/* Animation flottante aléatoire */
+@keyframes floatAngkor {
+  0% { transform: translateX(0) translateY(100vh) rotate(0deg); }
+  100% { transform: translateX(calc(100vw - 50px)) translateY(-100vh) rotate(360deg); }
+}
+
+/* On peut répartir les emojis aléatoirement */
+.angkor-decor span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.angkor-decor span:nth-child(2) { left: 25%; animation-delay: 5s; }
+.angkor-decor span:nth-child(3) { left: 40%; animation-delay: 2s; }
+.angkor-decor span:nth-child(4) { left: 55%; animation-delay: 7s; }
+.angkor-decor span:nth-child(5) { left: 70%; animation-delay: 3s; }
+.angkor-decor span:nth-child(6) { left: 85%; animation-delay: 4s; }
+.angkor-decor span:nth-child(7) { left: 50%; animation-delay: 6s; }
+

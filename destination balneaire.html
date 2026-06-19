@@ -1,0 +1,95 @@
+<html lang="fr">
+<head>
+<link href="style page balneaire.css" rel="stylesheet" type="text/css" >
+  <meta charset="UTF-8">
+  <title> Destination Balnéaire </title>
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-links">
+    <li><a href="DESTINATION PARTIEL2.html">🏠 Accueil</a></li>
+    <li><a href="destination urbaines 2.html">🌆 Urbaines</a></li>
+    <li><a href="destination balneaire.html" class="active">🏖️ Balnéaires</a></li>
+    <li><a href="destination desertique2.html">🏜️ Désertiques</a></li>
+    <li><a href="destination culturelles.html">🏛️ Culturelles</a></li>
+	<li><a href="tableau quiz.html"> 🎲 Quiz</a></li>
+  </ul>
+</nav>
+
+<h1>🌞 Découvrez nos Destinations Balnéaires</h1>
+
+<section class="texte-balneaire">
+  <h2>🏖️ Les Destinations Balnéaires : entre soleil, mer et douceur de vivre ☀️</h2>
+  <p>
+    Fermez les yeux un instant… Vous entendez le clapotis des vagues, le vent qui caresse les palmiers, 
+    et le sable chaud sous vos pieds. Nos <strong>destinations balnéaires</strong> vous invitent à 
+    vivre des moments de pure détente, là où le temps semble s’arrêter.
+  </p>
+
+  <p>
+    Que vous choisissiez les <strong>Maldives</strong> pour leur lagon turquoise, 
+    la <strong>Côte d’Azur</strong> pour son charme méditerranéen, 
+    ou <strong>Bali</strong> pour ses couchers de soleil envoûtants, 
+    chaque lieu est une promesse d’évasion et de sérénité.
+  </p>
+
+  <p>
+    Plongez dans les eaux cristallines, savourez des spécialités locales en bord de mer, 
+    explorez les fonds marins ou laissez-vous simplement bercer par le bruit des vagues.  
+    Ici, chaque journée commence avec un lever de soleil et se termine dans la douceur d’un horizon doré.
+  </p>
+
+  <h3>🌊 Prêt à faire le grand plongeon ?</h3>
+  <p>
+    Choisissez votre coin de paradis, préparez vos lunettes de soleil… et laissez la mer faire le reste.  
+    <em>Les plus beaux rivages du monde vous attendent.</em>
+  </p>
+</section>
+
+<div class="zone-bulle">
+
+  <div class="bulle" onclick="window.open('maldives.html', '_blank')">
+    <img src="images/500pxRF_122032123.avif" alt="Maldives">
+    <h3>🏝️ Les Maldives</h3>
+    <p>Des plages immaculées, une mer turquoise et un ciel infini. L'endroit idéal pour se ressourcer au paradis.</p>
+  </div>
+
+  <div class="bulle" onclick="window.open('cote d\'azur.html', '_blank')">
+    <img src="images/last-minute-cote-d-azur.jpg" alt="Côte d’Azur">
+    <h3>🌅 La Côte d’Azur</h3>
+    <p>Le charme méditerranéen, les marchés colorés et les eaux azurées de la Riviera française.</p>
+  </div>
+
+  <div class="bulle" onclick="window.open('bali.html', '_blank')">
+    <img src="images/bali.jpg" alt="Bali">
+    <h3>🌺 Bali</h3>
+    <p>Une île où la spiritualité, la nature et les plages dorées se rencontrent dans une harmonie parfaite.</p>
+  </div>
+
+</div>
+
+<footer class="footer-balneaire">
+  <div class="back-home" onclick="goHomeBalneaire(this)">
+    🐬 Surf vers l’accueil ? Cliquez ici !
+    <span class="bubble bubble1"></span>
+    <span class="bubble bubble2"></span>
+    <span class="bubble bubble3"></span>
+  </div>
+</footer>
+<script>
+function goHomeBalneaire(element) {
+  element.classList.add('fade'); // déclenche animation plouf
+  setTimeout(() => {
+    window.location.href = "DESTINATION PARTIEL2.html"; // redirection accueil
+  }, 1000);
+}
+</script>
+
+
+<!-- Petites bulles décoratives -->
+<div class="bulle-deco bulle1"></div>
+<div class="bulle-deco bulle2"></div>
+<div class="bulle-deco bulle3"></div>
+
+</body> 
+</html>

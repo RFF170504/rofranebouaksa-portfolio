@@ -1,0 +1,115 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz des destinations 🌍</title>
+  <link href="tableau quiz.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="DESTINATION PARTIEL2.html">🏠 Accueil</a></li>
+    <li><a href="destination urbaines 2.html">🌆 Urbaines</a></li>
+    <li><a href="destination balneaire.html">🏖️ Balnéaires</a></li>
+    <li><a href="destination desertique2.html">🏜️ Désertiques</a></li>
+    <li><a href="destination culturelles.html">🏛️ Culturelles</a></li>
+    <li><a href="quiz-destinations.html" class="active">🎲 Quiz</a></li>
+  </ul>
+</nav>
+
+
+<!-- Header / Intro -->
+<header class="quiz-header">
+  <h1>🎉 Quiz des destinations</h1>
+  <p>Nous sommes à la dernière étape de votre voyage virtuel ! Jouez à notre petit jeu et devinez le pays grâce aux indices. Amusez-vous bien !</p>
+</header>
+
+<!-- Tableau quiz -->
+<section class="quiz-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Indice</th>
+        <th>Destination</th>
+        <th>Devinez le pays</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🗼☕</td>
+        <td>Tokyo</td>
+        <td>
+          <button onclick="revealAnswer(this)">Révéler</button>
+          <span class="answer">Japon</span>
+        </td>
+      </tr>
+      <tr>
+        <td>🌊🍮</td>
+        <td>Lisbonne</td>
+        <td>
+          <button onclick="revealAnswer(this)">Révéler</button>
+          <span class="answer">Portugal</span>
+        </td>
+      </tr>
+      <tr>
+        <td>🕌🌶️</td>
+        <td>Marrakesh</td>
+        <td>
+          <button onclick="revealAnswer(this)">Révéler</button>
+          <span class="answer">Maroc</span>
+        </td>
+      </tr>
+      <tr>
+        <td>🏝️🦀</td>
+        <td>Maldives</td>
+        <td>
+          <button onclick="revealAnswer(this)">Révéler</button>
+          <span class="answer">Maldives</span>
+        </td>
+      </tr>
+      <tr>
+        <td>🐪🌵</td>
+        <td>Sahara</td>
+        <td>
+          <button onclick="revealAnswer(this)">Révéler</button>
+          <span class="answer">Tunisie / Algérie / Maroc</span>
+        </td>
+      </tr>
+      <!-- Ajoute ici toutes les autres destinations -->
+    </tbody>
+  </table> <br> <br> <button id="celebrate-btn">Tu as tout trouvé? <br>Bravo !🎉</button>
+</section>
+
+<!-- Footer / au revoir -->
+<footer class="quiz-footer">
+  <p>Merci d’avoir suivi notre voyage virtuel ! On espère que vous avez trouvé la destination de vos rêves ✈️🌍</p>
+  <a href="DESTINATION PARTIEL2.html" class="back-home">Retour à l'accueil</a>
+</footer>
+
+<!-- JS pour révéler réponse -->
+<script>
+function revealAnswer(button) {
+  const answer = button.nextElementSibling;
+  answer.style.display = "inline";
+  button.style.display = "none";
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script>
+document.getElementById("celebrate-btn").addEventListener("click", function() {
+    // Confettis en couleur doré et vert
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#f7e7b3', '#1c5a34', '#ffd700']
+    });
+});
+</script>
+
+</body>
+</html>

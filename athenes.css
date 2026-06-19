@@ -1,0 +1,299 @@
+/* ===== STYLE GÉNÉRAL ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #b8d8ff, #e6f1ff);
+  color: #0f2a47;
+  overflow-x: hidden;
+}
+
+/* ===== EMOJIS ANIMÉS ===== */
+
+.emoji-1, .emoji-2, .emoji-3 {
+  position: fixed;
+  font-size: 2.6em;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* vase 🏺 */
+.emoji-1 {
+  top: 20%;
+  left: -100px;
+  animation: move1 14s linear infinite;
+}
+
+/* feuille 🌿 */
+.emoji-2 {
+  top: 55%;
+  left: 110%;
+  animation: move2 18s linear infinite;
+}
+
+/* colombe 🕊️ */
+.emoji-3 {
+  top: 10%;
+  left: -120px;
+  animation: move3 20s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes move1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(1600px); }
+}
+
+@keyframes move2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1600px); }
+}
+
+@keyframes move3 {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(1600px) translateY(25px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+/* ===== HEADER ===== */
+.athens-header {
+  text-align: center;
+  padding: 60px 20px;
+  color: #003b6f;
+  background: linear-gradient(to bottom, #eaf5ff, transparent);
+}
+
+.athens-header h1 {
+  font-size: 4em;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,60,110,0.4);
+}
+
+.tagline {
+  margin-top: -10px;
+  font-size: 1.3em;
+  opacity: 0.8;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* ===== INFO LIGNES ===== */
+.info {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.7);
+  border-left: 5px solid #003b6f;
+  border-radius: 12px;
+}
+
+.info h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-row {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.info-row:last-child {
+  border: none;
+}
+
+.label {
+  width: 200px;
+  font-weight: bold;
+}
+
+/* ===== LIEUX ===== */
+.places h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #003b6f;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1000px;
+  margin: 25px auto;
+  gap: 20px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform .3s;
+}
+
+.place-card:hover {
+  transform: scale(1.05);
+}
+
+.place-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.place-info {
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
+
+.back {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #003b6f;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.back:hover {
+  transform: scale(1.07);
+}
+/* ===== NOURRITURE — flip-cards (Athènes) ===== */
+.food {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 10px 20px;
+}
+
+.food h2 {
+  text-align: center;
+  color: #003b6f;
+  margin-bottom: 18px;
+  font-size: 1.9rem;
+}
+
+/* grille des cartes nourriture */
+.food-grid {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+/* chaque carte + légende */
+/* ===== FLIP CARDS — VERSION 100% FONCTIONNELLE ===== */
+
+.food-grid {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px; /* IMPORTANT */
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* ULTRA IMPORTANT */
+  transition: transform 0.7s ease;
+}
+
+/* Quand on survole, on fait tourner l’intérieur */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Faces avant + arrière */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden; /* ULTRA IMPORTANT */
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Face avant : emoji */
+.flip-card-front {
+  font-size: 2.6rem;
+}
+
+/* Face arrière : image */
+.flip-card-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Légende */
+.food-info {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #05314f;
+}
+
+
+/* ===== VIDEOS ===== */
+.videos {
+  max-width: 1100px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+}
+
+.videos h2 {
+  text-align: center;
+  color: #003b6f;
+  margin-bottom: 14px;
+}
+
+.video-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* responsive : cartes + vidéos */
+@media (max-width: 760px) {
+  .flip-card, .flip-card-inner { width: 120px; height: 120px; }
+  .flip-card-front, .flip-card-back { font-size: 2.2rem; }
+  .video-container video { width: 100%; height: auto; max-width: 420px; }
+}
+

@@ -1,0 +1,262 @@
+<html lang="fr">
+<head>
+<link href="destination urbaine.css" rel="stylesheet" type="text/css" >
+  <meta charset="UTF-8">
+  <title>Destinations Urbaines</title>
+  <style>
+    /* --- Style global --- */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+.navbar {
+  background-color: #000000; /* noir */
+  border-bottom: 2px solid #e4d8a4; /* doré clair */
+  box-shadow: 0 2px 8px rgba(228, 216, 164, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #ffffff; /* texte blanc */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05em;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffffff; /* reste blanc */
+  text-shadow: 0 0 10px #ffffff; /* halo blanc */
+  transform: scale(1.1);
+}
+
+.nav-links li a.active {
+  color: #ffffff; /* active aussi blanche */
+  text-shadow: 0 0 10px #ffffff;
+}
+
+
+
+    /* --- Titre principal --- */
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 30px;
+      text-shadow: 0 0 15px white;
+      letter-spacing: 2px;
+    }
+
+    /* --- Texte d’introduction --- */
+    .intro {
+      text-align: center;
+      font-size: 1.2em;
+      color: #ddd;
+      max-width: 800px;
+      margin: 15px auto 40px;
+      line-height: 1.6;
+    }
+
+    /* --- Bannière --- */
+    .banniere {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-bottom: 3px solid #fff;
+      flex-wrap: wrap;
+    }
+
+    .banniere img {
+      height: 180px;
+      width: auto;
+      margin: 8px;
+      border-radius: 12px;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .banniere img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px white;
+    }
+
+    /* --- Section des destinations --- */
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .destination {
+      background-color: #1c1c1c;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    /* --- Animation apparente --- */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .destination img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .destination h2 {
+      text-align: center;
+      margin: 15px 0 10px;
+      font-size: 1.8em;
+      color: #f5f5f5;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    .destination p {
+      padding: 0 15px 20px;
+      text-align: center;
+      color: #dcdcdc;
+      font-size: 0.95em;
+    }
+
+    /* --- Bouton retour --- */
+    .btn-retour {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 12px 25px;
+      background-color: white;
+      color: #111;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-retour:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    /* --- Animation progressive --- */
+    .destination:nth-child(1) { animation-delay: 0.2s; }
+    .destination:nth-child(2) { animation-delay: 0.4s; }
+    .destination:nth-child(3) { animation-delay: 0.6s; }
+    .destination:nth-child(4) { animation-delay: 0.8s; }
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Barre de navigation -->
+  <nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="DESTINATION PARTIEL2.html">🏠 Accueil</a></li>
+    <li><a href="destination urbaines 2.html" class="active">🌆 Urbaines</a></li>
+    <li><a href="destination balneaire.html">🏖️ Balnéaires</a></li>
+    <li><a href="destination desertique2.html">🏜️ Désertiques</a></li>
+    <li><a href="destination culturelles.html">🏛️ Culturelles</a></li>
+	<li><a href="tableau quiz.html"> 🎲 Quiz</a></li>
+  </ul>
+</nav>
+
+
+
+  <!-- ✅ Titre et introduction -->
+  <h1>Destinations Urbaines</h1>
+
+  <p class="intro">
+    Découvrez nos quatre capitales urbaines d’exception, où l’énergie moderne rencontre la culture et la créativité.  
+    Des ruelles de Lisbonne aux gratte-ciels de New York, laissez-vous emporter par le rythme vibrant des grandes villes du monde.
+  </p>
+
+  <!-- ✅ Bannière d’images -->
+  <div class="banniere"> <div class="carte" onclick="window.location.href='destination tokyo (2).html'">
+
+  <img src="images/JAPON.jpg" alt="JAPON.jpg"></div>
+  <div class="carte" onclick="window.location.href='lisbonne.html'">
+    <img src="images/lisbonne.jpg" alt="lisbonne.jpg"> </div>
+	<div class="carte" onclick="window.location.href='maroc.html'">
+    <img src="images/marrakechpng.png" alt="marrakechpng.png"> </div>
+	<div class="carte" onclick="window.location.href='newyork.html'">
+    <img src="images/NYC.jpg" alt="NYC.jpg"> </div>
+  </div> </div>
+
+  <!-- ✅ Cartes des destinations -->
+  <div class="destinations">
+    <div class="destination"> <div class="carte" onclick="window.location.href='destination tokyo (2).html'">
+      <img src="images/JAPON.jpg" alt="JAPON.jpg"> </div>
+      <h2>Tokyo</h2>
+      <p>Explorez l’énergie futuriste de Tokyo, entre gratte-ciels illuminés, traditions ancestrales et cuisine exquise.</p>
+    </div>
+
+    <div class="destination">  <div class="carte" onclick="window.location.href='lisbonne.html'">
+      <img src="images/lisbonne.jpg" alt="lisbonne.jpg"> </div>
+      <h2>Lisbonne</h2>
+      <p>Flânez dans les ruelles colorées de Lisbonne, entre tramways jaunes, azulejos et douceur atlantique.</p>
+    </div>
+
+    <div class="destination"> <div class="carte" onclick="window.location.href='maroc.html'">
+      <img src="images/marrakechpng.png" alt="marrakechpng.png"> </div>
+      <h2>Marrakesh</h2>
+      <p>Plongez dans la magie de Marrakesh : souks vibrants, palais cachés et parfums d’épices sous le soleil du désert.</p>
+    </div>
+
+    <div class="destination"> <div class="carte" onclick="window.location.href='newyork.html'">
+      <img src="images/NYC.jpg" alt="NYC.jpg"> </div>
+      <h2>New York</h2>
+      <p>Découvrez la ville qui ne dort jamais, ses gratte-ciels iconiques et son rythme électrisant.</p>
+    </div>
+  </div>
+
+  <footer class="footer-urbaine">
+  <div class="back-home" onclick="goHomeUrbaine(this)">
+    ✨🚦 Feu rouge pour vous ? Accueil ici !✨
+    <span class="spark">✨</span>
+    <span class="spark">✨</span>
+    <span class="spark">✨</span>
+  </div>
+</footer>
+
+<script>
+function goHomeUrbaine(element) {
+  element.classList.add('fade');
+  setTimeout(() => {
+    window.location.href = "DESTINATION PARTIEL2.html"; // lien vers accueil
+  }, 800);
+}
+</script>
+
+
+</body>
+</html>

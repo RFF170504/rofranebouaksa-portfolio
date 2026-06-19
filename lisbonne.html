@@ -1,0 +1,123 @@
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Destination Lisbonne</title>
+  <link rel="stylesheet" href="lisbonnestyle.css" type="text/css">
+</head>
+<body>
+
+
+<!-- Header avec image + titre -->
+<header class="city-header">
+  <img src="images/LISBONNE.avif" alt="Lisbonne" class="city-image">
+  <h1>Lisbonne – La capitale aux sept collines</h1>
+</header>
+  
+
+<!-- Description générale -->
+<section class="city-description">
+  <p>
+    Lisbonne, ville ensoleillée du Portugal, combine charme historique et modernité.  
+    Ses ruelles pavées, tramways jaunes emblématiques et points de vue spectaculaires en font une destination incontournable.  
+    Découvrez culture, gastronomie et paysages uniques au cœur de l’Europe.
+  </p>
+</section>
+<!-- === Informations sur le voyage === -->
+  <section class="city-description">
+    <h2>🛫 Informations sur le voyage</h2>
+    <p><strong>Vol :</strong> Environ 2h30 depuis Paris</p>
+    <p><strong>Compagnies :</strong> TAP Portugal, Air France, Transavia</p>
+    <p><strong>Climat :</strong> Doux et ensoleillé toute l’année ☀️</p>
+  </section>
+<!-- Choses à faire (grille avec images + texte) -->
+<section class="activities-grid">
+  <div class="activity-card">
+    <img src="images/4-TOUR-PORTUGAL.jpg" alt="Tour de Belém">
+    <div class="activity-info">Visiter la Tour de Belém et le Monastère des Hiéronymites</div>
+  </div>
+  <div class="activity-card">
+    <img src="images/alfa-ma.jpeg" alt="Alfama">
+    <div class="activity-info">Se perdre dans les ruelles colorées du quartier de l’Alfama</div>
+  </div>
+  <div class="activity-card">
+    <img src="images/tram28.jpg" alt="Tram 28">
+    <div class="activity-info">Prendre le célèbre Tram 28 pour découvrir la ville</div>
+  </div>
+  <div class="activity-card">
+    <img src="images/miradouros.jpg" alt="Miradouros">
+    <div class="activity-info">Admirer Lisbonne depuis ses miradouros panoramiques</div>
+  </div>
+</section>
+
+<!-- Vidéos (sans autoplay) -->
+<section class="city-videos">
+  <h2>Vidéos sur Lisbonne</h2>
+  <video controls width="400">
+    <source src="audio/LISBONNE.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video>
+  <video controls width="400">
+    <source src="audio/lisbonne2.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video>
+</section>
+
+<!-- Nourriture -->
+<section class="city-food">
+  <h2>La gastronomie lisboète</h2>
+  <center> <div class="food-info">Croquez la vie... et un Pastel de Nata ! 🥧</div> </center>
+  <div class="food-grid">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">🥧</div>
+	  <div class="flip-card-back">
+      <img src="images/Pasteis-de-nata.jpg" alt="Pastéis de Nata">
+      </div>
+      </div>
+    </div>
+	</div>
+	
+ <center> <div class="food-info">Les gambas à la plancha, c’est l’été dans l’assiette ☀️</div>
+     <br> <br>
+	 <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🦐</div>
+        <div class="flip-card-back">
+          <img src="images/R.jpeg" alt="Gambas à la plancha">
+        </div>
+      </div>
+    </div>
+	</center>
+	<center> <br> <br>
+      <div class="food-info">Un petit verre de Vinho Verde ? Saúde ! 🍷</div>
+   <br> <br>
+	 <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍷</div>
+        <div class="flip-card-back">
+          <img src="images/Vinho Verde.jpg" alt="Vinho Verde">
+        </div>
+      </div>
+    </div>
+	</center>
+</section>
+
+<!-- Footer interactif -->
+<footer class="footer-urbaine">
+  <div class="back-home" onclick="goHomeUrbaine(this)" >
+    🚦 Retour Destinations Urbaine ✨
+  </div>
+</footer>
+<script>
+function goHomeUrbaine(element) {
+  element.classList.add('clicked');
+  setTimeout(() => {
+    window.location.href = "destination urbaines 2.html";
+  }, 600); // délai pour laisser l'effet visuel
+}
+</script>
+
+
+</body>
+</html>

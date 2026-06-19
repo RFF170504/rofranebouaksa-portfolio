@@ -1,0 +1,207 @@
+/* === Bali style (balistyle.css) === */
+
+/* couleurs principales */
+:root{
+  --sand1: #fff8e6;
+  --sand2: #f3e2c9;
+  --sea1: #bfefff;
+  --sea2: #89e0d8;
+  --accent: #ffb347; /* doré */
+  --text-dark: #20323a;
+}
+
+/* reset & base */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(to bottom, var(--sand1), var(--sand2) 45%, var(--sea1) 100%);
+  color:var(--text-dark);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+
+
+/* HEADER sans image : titre + vague légère + pétales */
+.bali-header{
+  position:relative;
+  overflow:hidden;
+  padding:70px 16px 40px;
+  text-align:center;
+  margin:24px auto;
+  max-width:1100px;
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,245,230,0.6));
+  box-shadow:0 8px 30px rgba(18,40,48,0.06);
+}
+
+/* title/subtitle */
+.bali-header h1{
+  margin:0;
+  font-size:2.8rem;
+  color:var(--text-dark);
+  background: linear-gradient(90deg, var(--accent), #ffd985 60%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow: 0 6px 24px rgba(255,180,71,0.12);
+}
+.bali-header .subtitle{
+  margin:10px 0 0;
+  color: rgba(32,50,58,0.85);
+  font-size:1.1rem;
+}
+
+/* wave decorative layer (subtle moving shine) */
+.wave-layer{
+  position:absolute;
+  left:-10%;
+  right:-10%;
+  bottom:-10%;
+  height:220px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(137,224,216,0.25), transparent 50%);
+  transform: translateY(0);
+  filter: blur(18px);
+  opacity:0.9;
+  animation: wave-move 8s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes wave-move{
+  0%{ transform: translateY(0) scaleX(1); opacity:0.9; }
+  50%{ transform: translateY(-8px) scaleX(1.02); opacity:0.95; }
+  100%{ transform: translateY(0) scaleX(1); opacity:0.9; }
+}
+
+/* petals floating decorative */
+.petals{ position:absolute; left:0; right:0; top:30%; pointer-events:none; display:flex; justify-content:center; gap:12px; }
+.petals .petal{ display:inline-block; font-size:1.8rem; opacity:0.85; animation:petal-fly 7s linear infinite; transform-origin:center; }
+.petals .petal:nth-child(2){ animation-delay:1s; }
+.petals .petal:nth-child(3){ animation-delay:2s; }
+.petals .petal:nth-child(4){ animation-delay:3s; }
+.petals .petal:nth-child(5){ animation-delay:4s; }
+
+@keyframes petal-fly{
+  0%{ transform: translateY(0) rotate(-4deg); opacity:0.9;}
+  50%{ transform: translateY(-22px) rotate(4deg) scale(1.05); opacity:1;}
+  100%{ transform: translateY(-40px) rotate(-2deg); opacity:0.85;}
+}
+
+/* PANEL blocks (sections) */
+main{ max-width:1100px; margin:26px auto; padding:0 16px 60px; }
+.panel{ background:rgba(255,255,255,0.85); padding:26px; border-radius:12px; margin-bottom:28px; box-shadow:0 8px 30px rgba(30,60,70,0.04); border:1px solid rgba(16,60,60,0.03);}
+.panel h2{ margin-top:0; color:var(--text-dark); text-align:center; font-size:1.35rem; }
+
+/* Activities grid : zoom + luminous shadow (blue / golden depending) */
+/* === NOUVELLE DISPOSITION POUR LES LIEUX À DÉCOUVRIR === */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 30px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.activity-card {
+  width: 100%;
+  max-width: 480px; /* plus large */
+  height: 320px; /* plus haut */
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+  transition: transform 0.4s cubic-bezier(.2,.9,.2,1), box-shadow 0.4s;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.activity-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.8) 80%);
+  color: var(--text-dark);
+  font-weight: 700;
+  padding: 18px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* effet au survol */
+.activity-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(255,180,71,0.2);
+}
+
+.activity-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Animation d’apparition douce */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activity-card {
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Version mobile */
+@media (max-width: 800px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-card {
+    height: 250px;
+  }
+}
+
+
+.activity-info{ padding:12px; font-weight:700; color:var(--text-dark); text-align:center; background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.85)); }
+
+/* hover effect: scale + luminous soft shadow (golden tint) */
+.activity-card:hover{ transform:translateY(-10px) scale(1.02); box-shadow:0 30px 60px rgba(255,180,71,0.16); z-index:6; }
+.activity-card:hover img{ transform:scale(1.08); }
+
+/* FOOD flip-cards (tropical emojis) */
+.food-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:18px; justify-items:center; margin-top:18px; }
+.flip-card{ width:150px; height:150px; perspective:1000px; }
+.flip-card-inner{ position:relative; width:100%; height:100%; transition:transform .75s; transform-style:preserve-3d; }
+.flip-card:hover .flip-card-inner{ transform:rotateY(180deg); }
+.flip-card-front, .flip-card-back{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; border-radius:12px; backface-visibility:hidden; box-shadow:0 8px 20px rgba(20,60,60,0.06); font-size:2.4rem; }
+.flip-card-front{ background:linear-gradient(90deg,var(--accent), #ffd985); color:#2b1b00; }
+.flip-card-back{ transform:rotateY(180deg); overflow:hidden; background:linear-gradient(180deg, rgba(200,240,235,0.8), rgba(255,255,255,0.9)); }
+.flip-card-back img{ width:100%; height:100%; object-fit:cover; border-radius:12px; }
+
+/* videos row (side by side) */
+.videos-row{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+.videos-row video{ width:100%; max-width:520px; border-radius:10px; box-shadow:0 12px 35px rgba(20,50,60,0.06); }
+
+/* footer */
+.footer-balneaire{ max-width:1100px; margin:28px auto 70px; padding:24px; text-align:center; border-radius:12px; background:linear-gradient(180deg, rgba(255,250,240,0.85), rgba(255,245,230,0.9)); box-shadow:0 12px 30px rgba(20,50,60,0.04); }
+.back-home{ display:inline-block; padding:12px 20px; border-radius:999px; background:linear-gradient(90deg,var(--accent), #ffd985); color:#1b1b1b; font-weight:700; cursor:pointer; transition: transform .28s, box-shadow .28s; }
+.back-home:hover{ transform:scale(1.06); box-shadow:0 18px 50px rgba(255,180,71,0.12); }
+.back-home.melt{ animation: melt-away .9s forwards; }
+@keyframes melt-away{ 0%{transform:scale(1);opacity:1;} 100%{transform:scale(.2) translateY(40px); opacity:0; filter:blur(6px);} }
+
+/* responsive */
+@media (max-width:800px){
+  .bali-header h1{ font-size:1.9rem; }
+  .petals .petal{ font-size:1.4rem; }
+  .activity-card img{ height:140px; }
+  .flip-card{ width:120px; height:120px; }
+  .videos-row video{ max-width:100%; }
+}

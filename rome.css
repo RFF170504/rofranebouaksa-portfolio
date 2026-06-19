@@ -1,0 +1,277 @@
+/* ===== Rome — CSS complet (colonne visible + parchemin + vidéos) ===== */
+
+/* police demandée : Snell Roundhand (si dispo) */
+body {
+  margin: 0;
+  font-family: "Snell Roundhand", "Georgia", serif;
+  background: linear-gradient(180deg, #3d4856 0%, #aab8c6 100%); /* bleu-gris doux */
+  color: #0f1720;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+/* ---- colonne romaine visible (gauche) ---- */
+.roman-column {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;              /* ajuste si tu veux plus/moins */
+  height: 100vh;
+  background: linear-gradient(to bottom, #d9cbb5 0%, #c8b79f 100%);
+  border-right: 2px solid rgba(0,0,0,0.08);
+  box-shadow: 6px 0 18px rgba(0,0,0,0.12);
+  z-index: 1;
+  /* cannelures (fluting) :
+     plusieurs bandes verticales légères pour l'effet colonne */
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,0.08) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 0.5px, transparent 0.5px);
+  background-size: 10px 100%, 20px 100%;
+}
+
+/* ---- frise discrète en haut (sous la colonne aussi) ---- */
+.roman-frieze {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 38px;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02));
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ---- espace contenu (à droite de la colonne) ---- */
+.content {
+  margin-left: 260px; /* laisser la place pour la colonne + marge (240 + 20) */
+  padding: 20px 40px;
+  z-index: 5;
+  position: relative;
+
+}
+
+/* ---- header ---- */
+.header {
+  margin-top: 18px;
+  text-align:center; 
+}
+
+.roman-title {
+  font-size: 3.2em;
+  margin: 6px 0 8px 0;
+  color: #f5efe6;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+/* subtitle */
+.subtitle {
+  margin-top: 0;
+  color: rgba(15,23,32,0.85);
+  font-size: 1.05em;
+  opacity: 0.95;
+}
+
+/* ---- parchemin beau (section d'intro) ---- */
+.parchment-box {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,250,240,0.95), rgba(245,239,230,0.95));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-left: 6px solid rgba(200,160,100,0.25);
+  padding: 22px 20px 22px 64px;
+  border-radius: 12px;
+  max-width: 980px;
+  margin: 18px 0 26px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  color: #112;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* icon parchemin */
+.parchment-icon {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  font-size: 28px; /* emoji taille */
+  opacity: 0.95;
+  transform: translateY(2px);
+}
+
+/* ---- info lignes (pratiques) ---- */
+.info-lignes {
+  max-width: 980px;
+  margin: 10px 0 24px 0;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 10px;
+  border-left: 4px solid rgba(180,140,80,0.22);
+  color: #091018;
+}
+
+.info-lignes h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #2b2b2b;
+}
+
+.info-row {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.info-row:last-child { border-bottom: none; }
+
+.label {
+  min-width: 180px;
+  font-weight: 700;
+  color: #3b3b3b;
+}
+
+.value { color: #111; }
+
+/* ---- lieux (grille) ---- */
+.places {
+  margin-top: 18px;
+}
+
+.places h2 {
+  margin-bottom: 10px;
+  color: #f5efe6;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin-bottom: 28px;
+}
+
+.place-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .28s ease, box-shadow .28s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.place-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.place-card img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.place-info {
+  padding: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---- nourriture (flip cards) ---- */
+.food-grid {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+	justify-content: center;
+  margin-bottom: 28px;
+
+}
+
+.flip-card {
+  width: 140px;
+  height: 140px;
+  perspective: 1000px;
+  align-items: center;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform .7s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,245,0.95));
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.flip-card-back { transform: rotateY(180deg); }
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ---- vidéos ---- */
+.videos {
+  margin-bottom: 26px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.videos h2 {
+  color: #f5efe6;
+  margin-bottom: 12px;
+}
+
+.video-container {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+   justify-content: center
+}
+
+/* ---- footer ---- */
+.culture-footer {
+  margin: 30px 0 60px 0;
+  text-align: center;
+}
+
+.back-home {
+  display: inline-block;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ---- responsive tweaks ---- */
+@media (max-width: 900px) {
+  .content { margin-left: 20px; padding: 18px; }
+  .roman-column { display: none; } /* petite écran : on cache la colonne */
+  .parchment-box { padding-left: 48px; }
+}

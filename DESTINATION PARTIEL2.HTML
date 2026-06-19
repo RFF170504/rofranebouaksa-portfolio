@@ -1,0 +1,335 @@
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Destination !</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #ffecd2, #fcb69f);
+    color: #222;
+    overflow-x: hidden;
+  }
+
+  /* --- Barre de navigation --- */
+  nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 3px solid #ff7b00;
+    z-index: 10;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+
+  nav a:hover {
+    color: #ff7b00;
+    text-shadow: 0 0 10px #fff;
+  }
+
+  /* --- Titre principal --- */
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 40px;
+    color: #333;
+    text-shadow: 2px 2px 10px white;
+  }
+
+  /* --- Musique --- */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 25px;
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: #ff9f3c;
+    transform: scale(1.05);
+  }
+
+  /* --- Texte général --- */
+  h2, h3 {
+    color: #333;
+    text-align: center;
+    text-shadow: 1px 1px 5px white;
+  }
+
+  p, h4 {
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #444;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  /* --- Marquee --- */
+  marquee {
+    display: block;
+    background: linear-gradient(90deg, #ffb347, #ffcc33);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+
+  marquee img {
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+
+  marquee img:hover {
+    transform: scale(1.05);
+  }
+
+  /* --- Formulaire coloré --- */
+  .formulaire {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(255, 120, 0, 0.4);
+  }
+
+  .formulaire h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff7b00;
+    text-shadow: 0 0 10px white;
+  }
+
+  .formulaire label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .formulaire input,
+  .formulaire select,
+  .formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffd699;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+  }
+
+  .formulaire input:focus,
+  .formulaire select:focus,
+  .formulaire textarea:focus {
+    outline: none;
+    border-color: #ff7b00;
+    box-shadow: 0 0 10px #ffbb55;
+  }
+
+  .formulaire button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .formulaire button:hover {
+    background-color: #ffa733;
+    transform: scale(1.03);
+  }
+
+  /* --- Pied de page --- */
+  footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    margin-top: 60px;
+    border-top: 3px solid #ff7b00;
+  }
+
+  footer a {
+    color: #ff7b00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    text-shadow: 0 0 8px #fff;
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Barre de navigation -->
+  <nav>
+    <a href="DESTINATION PARTIEL2.html">🏠 Accueil</a>
+    <a href="destination urbaines 2.html">🌆 Urbaines</a>
+    <a href="destination balneaire.html">🏖️ Balnéaires</a>
+    <a href="destination desertique2.html">🏜️ Désertiques</a>
+    <a href="destination culturelles.html">🏛️ Culturelles</a>
+	<a href="tableau quiz.html" class="active">🎲 Quiz</a>
+  </nav>
+
+  <button onclick="playMusic()">🎵 Lancer la musique</button>
+  <audio id="bg-music" loop>
+    <source src="audio/Road Trip.mp3" type="audio/mpeg">
+    Votre navigateur ne supporte pas la lecture audio.
+  </audio>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById('bg-music');
+      music.play()
+        .then(() => console.log("Musique lancée !"))
+        .catch(error => console.log("Erreur lors de la lecture :", error));
+    }
+  </script>
+
+  <h1><center>Trouvez votre destination grâce à vous !</center></h1>
+
+  <marquee loop SCROLLDELAY="1">
+    <img src="images/usa-new-york-times-square-taxi-publicites.jpg" height="150">
+    <img src="images/asie.jpg" height="150">
+    <img src="images/champasie.jpg" height="150">
+    <img src="images/desert.jpg" height="150">
+    <img src="images/lille.jpg" height="150">
+    <img src="images/montagne.jpg" height="150">
+    <img src="images/ville.jpg" height="150">
+  </marquee>
+
+  <!-- 💬 Ton texte complet conservé -->
+  <h4><em><h3>Chère futur voyageur,</h3></em>
+  Vous révez de voyager, mais vous ne savais pas ou aller, ne vous inquièter pas, c'est souvent le problème rencontré pour tout le monde avant chaque voyage.
+  C'est pour cela que notre site rest aujourd'hui un veritable succés. 
+  <br><br><center>Destination urbaines ? Destination naturelles ? Destination balnéaires ? Destination désertique ?...</center>
+  <br> Elles n'attendent que vous !
+  </h4>
+<p> 
+🌍 Explorez le monde à votre rythme
+<br>
+Que vous soyez passionné d’aventure, amateur de détente ou curieux de nouvelles cultures, nous avons rassemblé pour vous les plus belles destinations à découvrir.
+Chaque lieu possède son charme, son histoire et ses secrets… et nous vous aidons à les explorer, un clic à la fois.
+<br> <br>
+Notre objectif : vous inspirer et vous guider vers <strong> la destination qui vous ressemble. </strong>
+</p>
+<br> <br><br>
+
+<h3>✈️ Comment ça marche ? ✈️ </h3>
+<p>
+Sur cette page, vous trouverez une sélection de destinations soigneusement choisies à travers le monde.
+Cliquez simplement sur celle qui attire votre attention : vous serez redirigé vers une page partenaire contenant plus de détails, de photos, d’astuces de voyage et de bons plans pour préparer votre séjour.
+</p>
+<br> <br><br>
+<h3>🌅 Laissez-vous inspirer </h3>
+<p>
+Envie d’une escapade romantique à <strong> Paris </Strong>, d’un road trip dans <strong> les pays nordiques </Strong>, d’un bain de soleil sur <strong> les plages des Caraïbes</Strong>, ou d’une immersion culturelle au cœur de <strong>Tokyo</Strong> ?
+Parcourez, rêvez, explorez… et laissez votre instinct de voyageur vous guider.
+</p>
+<br> <br>
+<h3>💫 Votre prochaine aventure commence ici </h3>
+<p>
+Chaque destination est une promesse : celle d’une expérience unique et de souvenirs inoubliables.
+Alors, préparez votre sac, ouvrez grand vos yeux et votre cœur, et laissez-vous emporter vers le voyage de vos rêves.
+
+Bon voyage, et bienvenue dans notre univers d’évasion.
+</p>
+<br> <br>
+<h2> <center>🌏 Trouvez votre prochaine destination</h2> </center>
+<P>
+Chaque voyage commence par une idée, un rêve ou une image.<br> 
+Sur notre site, nous vous aidons à transformer <strong>cette envie en réalité.</strong>
+<BR>
+Explorez nos sélections, laissez-vous inspirer par nos photos et nos descriptions, puis cliquez sur la destination qui vous attire le plus : vous serez redirigé vers un site partenaire pour en découvrir davantage — conseils, bons plans, hébergements et activités sur place.
+<br>
+Que vous soyez aventurier, rêveur, curieux ou simplement en quête d’un peu de soleil, il y a quelque part dans le monde un lieu qui vous attend.
+
+Alors, où partons-nous aujourd’hui ?
+</P>
+
+
+  <!-- 🌈 Formulaire ajouté à la fin -->
+  <div class="formulaire">
+  <h2>💫 Trouvez votre destination idéale</h2>
+  <form onsubmit="rediriger(event)">
+    <label for="nom">Votre nom :</label>
+    <input type="text" id="nom" placeholder="Entrez votre nom" required>
+
+    <label for="type">Type de destination :</label>
+    <select id="type" required>
+      <option value="">-- Choisissez --</option>
+      <option value="urbaine">Urbaine</option>
+      <option value="balneaire">Balnéaire</option>
+      <option value="desertique">Désertique</option>
+      <option value="culturelle">Culturelle</option>
+    </select>
+
+    <label for="budget">Votre budget (€) :</label>
+    <input type="number" id="budget" placeholder="Ex: 1500" step="100" min="0">
+
+    <label for="envie">Vos envies de voyage :</label>
+    <textarea id="envie" rows="4" placeholder="Aventure, détente, culture, gastronomie..."></textarea>
+
+    <button type="submit">Trouver ma destination</button>
+  </form>
+</div>
+
+<script>
+function rediriger(event) {
+  event.preventDefault(); // empêche le rechargement de la page
+  const type = document.getElementById('type').value;
+
+  if (type === 'urbaine') {
+    window.location.href = 'destination urbaines 2.html';
+  } else if (type === 'balneaire') {
+    window.location.href = 'destination balneaire.html';
+  } else if (type === 'desertique') {
+    window.location.href = 'destination desertique.html';
+  } else if (type === 'culturelle') {
+    window.location.href = 'destination culturelles.html';
+  } else {
+    alert("Veuillez choisir un type de destination avant de continuer.");
+  }
+}
+</script>
+
+  <footer>
+    © 2025 Destination! — Créé avec ☀️ et passion.  
+    <br><a href="DESTINATION PARTIEL2.html">Explorer les destinations</a>
+  </footer>
+
+</body>
+</html>

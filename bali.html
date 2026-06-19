@@ -1,0 +1,145 @@
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bali — L'île des Dieux 🌺</title>
+  <link rel="stylesheet" href="bali.css">
+</head>
+<body>
+
+
+
+  <!-- HEADER animé sans image -->
+  <header class="bali-header" role="banner" aria-label="Bali header">
+    <div class="header-inner">
+      <h1>Bali — L'île aux mille sourires ✨</h1>
+      <p class="subtitle">Rizières, temples et plages infinies — soleil, eau turquoise et douceur.</p>
+    </div>
+
+    <!-- éléments décoratifs : vagues + pétales -->
+    <div class="wave-layer" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true">
+      <span class="petal">🌺</span>
+      <span class="petal">🌿</span>
+      <span class="petal">🌸</span>
+      <span class="petal">🌴</span>
+      <span class="petal">🐚</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INFOS -->
+    <section class="panel info">
+      <h2>🛫 Informations pratiques</h2>
+      <p><strong>Vol :</strong> Environ 16h (avec escale) depuis Paris</p>
+      <p><strong>Compagnies :</strong> Qatar Airways, Emirates, Air France + partenaires</p>
+      <p><strong>Meilleure période :</strong> Avril à octobre (saison sèche)</p>
+      <p><strong>Monnaie :</strong> Roupie indonésienne (IDR)</p>
+    </section>
+
+    <!-- À DÉCOUVRIR (cartes style Tokyo : zoom + ombre lumineuse) -->
+    <section class="panel">
+      <h2>🏯 À découvrir à Bali</h2>
+      <div class="activities-grid">
+        <article class="activity-card" tabindex="0">
+          <img src="images/Rizières de Tegallalang.jpg" alt="Rizières de Tegallalang">
+          <div class="activity-info">Rizières de Tegallalang — paysages en terrasses</div>
+        </article>
+
+        <article class="activity-card" tabindex="0">
+          <img src="images/Tanah Lot.jpeg" alt="Tanah Lot">
+          <div class="activity-info">Tanah Lot — temple au bord de l'océan</div>
+        </article>
+
+        <article class="activity-card" tabindex="0">
+          <img src="images/Uluwatu.jpeg" alt="Uluwatu">
+          <div class="activity-info">Uluwatu — falaises et couchers de soleil</div>
+        </article>
+
+        <article class="activity-card" tabindex="0">
+          <img src="images/nusapenida.jpg" alt="Nusa Penida">
+          <div class="activity-info">Nusa Penida — eaux turquoise et snorkeling</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GASTRONOMIE (flip-cards avec emojis) -->
+    <section class="panel">
+      <h2>🍛 Saveurs balinaises</h2>
+      <p>Riz épicé, satay, plats de fruits de mer et douceurs locales — un vrai voyage de goûts.</p>
+
+      <div class="food-grid" aria-hidden="false">
+        <div class="flip-card" title="Nasi Goreng">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🍛</div>
+            <div class="flip-card-back"><img src="images/Nasi Goreng.jpg" alt="Nasi Goreng"></div>
+          </div>
+        </div>
+
+        <div class="flip-card" title="Satay">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🍢</div>
+            <div class="flip-card-back"><img src="images/Satay.jpg" alt="Satay"></div>
+          </div>
+        </div>
+
+        <div class="flip-card" title="Bebek Betutu">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🦆</div>
+            <div class="flip-card-back"><img src="images/Bebek Betutu.jpeg" alt="Bebek Betutu"></div>
+          </div>
+        </div>
+
+        <div class="flip-card" title="Smoothie bowl">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🥣</div>
+            <div class="flip-card-back"><img src="images/Smoothie bowl.jpeg" alt="Smoothie bowl"></div>
+          </div>
+        </div>
+
+        <div class="flip-card" title="Sate Lilit">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🍤</div>
+            <div class="flip-card-back"><img src="images/Sate Lilit.jpg" alt="Sate Lilit"></div>
+          </div>
+        </div>
+
+        <div class="flip-card" title="Es Campur">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">🍧</div>
+            <div class="flip-card-back"><img src="images/Es Campur.jpg" alt="Es Campur"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDÉOS côte à côte -->
+    <section class="panel city-videos">
+      <h2>🎥 Bali en images</h2>
+      <div class="videos-row">
+        <video controls preload="metadata">
+          <source src="audio/Voyage à Bali en 1 minute.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-balneaire">
+    <div class="back-home" id="backHomeBali">🏖️ Retour Destinations Balnéaires</div>
+  </footer>
+
+  <!-- JS minimal pour le bouton retour (effet puis redirection) -->
+  <script>
+    document.getElementById('backHomeBali').addEventListener('click', function(e){
+      const el = e.currentTarget;
+      el.classList.add('melt');
+      setTimeout(()=> window.location.href = 'destination balneaire.html', 600);
+    });
+  </script>
+
+</body>
+</html>

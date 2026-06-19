@@ -1,0 +1,238 @@
+/* === Style global === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f7ecd2, #e6d4a0); /* sable doux */
+  color: #b8860b; /* doré chaud */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* === Header === */
+.desert-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  position: relative;
+}
+
+/* --- Barre de navigation désertique --- */
+nav {
+  background: linear-gradient(90deg, #d97706, #fbbf24, #fcd34d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+/* Liens centrés avec espace uniforme */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff8e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  color: #fffbe8;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+
+
+.desert-header h1 {
+  font-size: 3em;
+  color: #b8860b;
+  text-shadow: 0 0 8px rgba(184, 134, 11, 0.6);
+  margin: 0;
+  animation: mirage 3s ease-in-out infinite alternate;
+}
+
+.desert-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #a67c00;
+}
+
+.underline {
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, #ffd700, #e6c200);
+  margin: 10px auto 0;
+  animation: shimmer 2s infinite;
+}
+
+.desert-intro {
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(180deg, #ffecd2 0%, #fcb69f 100%); /* fond chaud, soleil et sable */
+  color: #7a2e0e; /* texte chaud, couleur terre/ocre */
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 150, 50, 0.4); /* effet lumineux chaud */
+}
+
+.desert-intro h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #c75c1a; /* titre encore plus chaud */
+}
+
+.desert-intro p {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+
+
+/* === Mirage animation === */
+@keyframes mirage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* === Grille desert === */
+.desert-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.desert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.desert-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+  background: #f7ecd2;
+}
+
+.desert-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.desert-card:hover img {
+  transform: scale(1.1);
+}
+
+.desert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(184, 134, 11, 0.8);
+}
+
+.desert-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(184, 134, 11, 0.7);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+/* === Footer === */
+.desert-footer {
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+}
+
+.back-home {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 15px 25px;
+  border-radius: 25px;
+  background: rgba(184, 134, 11, 0.8);
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.back-home:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(184, 134, 11, 0.8), 0 0 50px rgba(230, 198, 0, 0.5);
+}
+
+/* === Footer interactif désertique === */
+.footer-desertique {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+  border-top: 2px solid #ffcc00;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-home {
+  color: #fff8dc;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 15px 25px;
+  border-radius: 25px;
+  background: rgba(255, 215, 50, 0.2);
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 50, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.back-home:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 215, 50, 0.9), 0 0 50px rgba(255, 200, 0, 0.6);
+}
+
+/* Animation “fondre comme du sable” */
+.back-home.fade {
+  animation: desert-melt 0.8s forwards;
+}
+
+@keyframes desert-melt {
+  0% { transform: scale(1); opacity: 1; box-shadow: 0 0 25px rgba(255,215,50,0.9); }
+  50% { transform: scale(1.1) translateY(-5px); opacity: 0.7; filter: blur(1px); }
+  100% { transform: scale(0.2) translateY(10px); opacity: 0; filter: blur(4px); }
+}

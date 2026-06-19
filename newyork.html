@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>New York 🗽</title>
+<link rel="stylesheet" href="newyorkstyle.css">
+<style>
+/* === STYLE DIRECTEMENT DANS LE HEAD POUR TEST RAPIDE === */
+
+/* === Effet fond bleu électrique === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: radial-gradient(circle at bottom, #00111f 0%, #000 70%);
+  color: #e6f0ff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 120, 255, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 150, 255, 0.2), transparent 60%),
+    radial-gradient(circle at 80% 30%, rgba(0, 80, 255, 0.25), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(0, 200, 255, 0.15), transparent 80%);
+  animation: ny-glow 15s infinite alternate ease-in-out;
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes ny-glow {
+  0% { transform: translate(-10%, -10%) scale(1); opacity: 0.6; }
+  50% { transform: translate(10%, 10%) scale(1.05); opacity: 0.9; }
+  100% { transform: translate(-5%, 5%) scale(1); opacity: 0.7; }
+}
+
+/* Sections et contenu au-dessus du fond */
+header, section, footer {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* === Header === */
+header h1 {
+  font-size: 3em;
+  text-align: center;
+  color: #00bfff;
+  text-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #a0d8ff;
+}
+
+/* === Activités === */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.activity-card {
+  background: rgba(0, 0, 50, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.activity-card:hover img {
+  transform: scale(1.1);
+}
+
+.activity-card p {
+  padding: 10px;
+  color: #00d4ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.7);
+}
+
+/* === Nourriture === */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+.flip-card {
+  background: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: #00d4ff;
+  background: rgba(0, 0, 50, 0.6);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* === Vidéos === */
+.city-videos video {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 10px;
+  margin: 15px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+/* === Retour aux destinations urbaines === */
+.retour {
+  display: block;
+  text-align: center;
+  margin: 50px auto;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00bfff, #0080ff);
+  color: black;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  width: fit-content;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.retour:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>New York 🗽</h1>
+  <p>La ville qui ne dort jamais, entre gratte-ciel et lumières néon.</p>
+</header>
+
+<section>
+  <center ><h2>🛫 Informations sur le voyage</h2>
+  <p><strong>Vol :</strong> Environ 8h depuis Paris</p>
+  <p><strong>Compagnies :</strong> Air France, Delta, American Airlines</p>
+  <p><strong>Climat :</strong> Urbain, chaud en été et frais en hiver 🌆</p> </center>
+</section>
+
+<section>
+  <h2>🏙️ À découvrir à New York</h2>
+  <div class="activities-grid">
+    <div class="activity-card">
+      <img src="images/timesquare.jpg" alt="Times Square">
+      <p>Times Square – Le cœur illuminé de la ville</p>
+    </div>
+    <div class="activity-card">
+      <img src="images/status.jpg" alt="Statue de la Liberté">
+      <p>La Statue de la Liberté – Symbole emblématique</p>
+    </div>
+    <div class="activity-card">
+      <img src="images/central park.jpg" alt="Central Park">
+      <p>Central Park – Une pause nature au milieu des gratte-ciel</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🍕 Saveurs new-yorkaises</h2>
+  <div class="food-grid">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍕</div>
+        <div class="flip-card-back"><img src="images/pizza.jpg" alt="Pizza"></div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🍔</div>
+        <div class="flip-card-back"><img src="images/burger.jpg" alt="Burger"></div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🧋</div>
+        <div class="flip-card-back"><img src="images/bubble.jpeg" alt="Bubble Tea"></div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">🥨</div>
+        <div class="flip-card-back"><img src="images/Super-Mini-Pretzels.jpeg" alt="Pretzel"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="city-videos">
+  <h2>🎥 Découvrez New York en vidéo</h2>
+  <center> <video controls>
+    <source src="audio/1 Minute of NEW YORK.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video> </center>
+</section>
+
+<a href="destination urbaines 2.html" class="retour">⬅️ Retour aux destinations urbaines</a>
+
+</body>
+</html>
